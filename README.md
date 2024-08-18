@@ -14,7 +14,7 @@ This portfolio concept showcases a _sleek and modern_ website dedicated to April
 
 ## Installation
 
-Make sure you have Node.js v18.17.0+ installed on your machine.
+Make sure you have the latest LTS version of Node.js installed on your machine.
 
 To get this project up and running on your local machine:
 
