@@ -1,0 +1,649 @@
+@import "../node_modules/animate.css/animate.css";
+
+/* General Styles */
+
+:root {
+    --main-color: #ff0000;
+    --bg-color: #ebebeb;
+    --font-family: "Roboto Condensed", Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: var(--main-color);
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header Styles */
+header {
+    background-color: transparent;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: none;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+header.scrolled {
+    background-color: var(--main-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header .logo img {
+    padding-left: 10px;
+    width: 140px;
+    height: auto;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.menu-icon {
+    height: 40px;
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+}
+
+.dropdown-menu li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Hero Section */
+#hero {
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero-video-container {
+    position: relative;
+    width: 100%;
+    height: clamp(500px, 100vw, 800px);
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.hero-content {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #fff;
+}
+
+.hero-content h1 {
+    font-size: 6rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-description-container-mobile-1024px {
+    display: none;
+}
+
+.hero-description-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--bg-color);
+}
+
+.hero-description {
+    max-width: 60%;
+}
+
+.hero-description p {
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    font-weight: 450;
+    line-height: 1.6;
+    margin: 0 30px 60px;
+}
+
+.btn-primary {
+    background-color: #ff0000;
+    color: #fff;
+    margin-left: 30px;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 500;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+.btn-primary:hover,
+.btn-primary-mobile-1024px:hover {
+    transform: translateY(-10px);
+    background-color: transparent;
+    color: #1b1b1b;
+}
+
+.hero-image {
+    max-width: 35%;
+}
+
+.hero-image img {
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Featured Bikes Section */
+#featured-bikes {
+    padding: 100px 0;
+    background-color: var(--bg-color);
+    text-align: center;
+}
+
+.bike-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.bike-item {
+    display: block;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+    width: 250px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.bike-item img {
+    width: 100%;
+}
+
+.bike-details {
+    padding: 20px;
+}
+
+.bike-item h3 {
+    font-size: 24px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.bike-item p {
+    font-size: 18px;
+    color: #777;
+    margin: 0;
+}
+
+.bike-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color: #ff0000;
+}
+
+.bike-item:hover .btn-secondary {
+    background-color: #ff0000;
+}
+
+.bike-item:hover .bike-details h3 {
+    color: #ff0000;
+}
+
+/* Join Aprilia Section */
+#join-aprilia {
+    background-color: #d1d1d1;
+    color: #777;
+    text-align: center;
+}
+
+#join-aprilia h3 {
+    text-transform: uppercase;
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+#join-aprilia img {
+    margin-bottom: -10px;
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    object-fit: cover;
+}
+
+#join-aprilia .join-items {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+}
+
+#join-aprilia .join-item {
+    flex: 1 1 auto;
+    max-width: 300px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+}
+
+.join-item:hover {
+    color: #a30505;
+    transform: translateY(-10px);
+}
+
+/* Miscellaneous Section */
+#miscellaneous {
+    padding: 100px 0;
+    background-color: var(--bg-color);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+#miscellaneous h2 {
+    margin-bottom: 70px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    perspective: 5000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.card {
+    height: 600px;
+    max-width: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.card {
+    text-align: center;
+    transition: all 1.5s cubic-bezier(0.7, -0.5, 0.3, 1.8);
+    transform-style: preserve-3d;
+}
+
+.card-container .card:nth-child(1) .front {
+    background-image: url(../images/homepage/miscellaneous/share-your-aprilia.png);
+}
+
+.card-container .card:nth-child(1) .back {
+    background-image: url(../images/homepage/miscellaneous/share.png);
+}
+
+.card-container .card:nth-child(2) .front {
+    background-image: url(../images/homepage/miscellaneous/share-your-aprilia-1.png);
+}
+
+.card-container .card:nth-child(2) .back {
+    background-image: url(../images/homepage/miscellaneous/your.png);
+}
+
+.card-container .card:nth-child(3) .front {
+    background-image: url(../images/homepage/miscellaneous/share-your-aprilia-2.png);
+}
+
+.card-container .card:nth-child(3) .back {
+    background-image: url(../images/homepage/miscellaneous/aprilia.png);
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    width: 400px;
+    position: relative;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.front {
+    cursor: pointer;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 50px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.back {
+    transform: rotateY(180deg);
+    position: absolute;
+    border-radius: 50px;
+    height: 600px;
+}
+
+.content h2 {
+    font-size: 4rem;
+    padding-top: 50%;
+    color: #f0f0f0;
+}
+
+.tilt-right {
+    transform: rotateZ(10deg);
+}
+
+.tilt-left {
+    transform: rotateZ(-10deg);
+}
+
+#miscellaneous .btn-primary {
+    margin-top: 100px;
+}
+
+/* Scrollbar personalized */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+    width: 50px;
+}
+
+/* Footer Section */
+footer {
+    background-color: rgb(17, 17, 17);
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    clear: both;
+    position: relative;
+    z-index: 1;
+}
+
+.footer-links ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.footer-links ul li {
+    margin: 0 15px;
+}
+
+.footer-links ul li a {
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--main-color);
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 30px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: scale(1.1);
+}
+
+.newsletter form {
+    margin-top: 30px;
+}
+
+.newsletter input[type="email"] {
+    padding: 15px;
+    width: clamp(100px, 10vw, 300px);
+    border: none;
+    border-radius: 20px;
+    margin-right: -10px;
+    margin-left: 10px;
+}
+
+.newsletter button {
+    padding: 10px 20px;
+    font-family: var(--font-family);
+    background-color: transparent;
+    margin-left: 15px;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.newsletter button:hover {
+    background-color: #ffffff;
+    color: #1b1b1b;
+}
+
+/* You can modify individual sections as needed */
+#featured-bikes {
+    background: linear-gradient(to bottom, #ebebeb 0%, #d1d1d1 100%);
+}
+
+#join-aprilia {
+    background: linear-gradient(to bottom, #d1d1d1 0%, #e4e4e4 100%);
+}
+
+#miscellaneous {
+    background: linear-gradient(to bottom, #e4e4e4 0%, #e2e2e2 100%);
+}
+
+@media screen and (max-width: 1557px) {
+    .hero-content h1 {
+        font-size: clamp(3.2rem, 8vw, 6rem);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        margin-bottom: -3rem;
+    }
+
+    .hero-description-container {
+        display: none;
+    }
+
+    .hero-description-container-mobile-1024px {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: var(--bg-color);
+    }
+
+    .hero-description-mobile-1024px {
+        order: 1;
+        text-align: center;
+        max-width: 100%;
+        font-size: clamp(1rem, 4vw, 2rem);
+        color: rgb(0, 0, 0);
+        font-weight: 450;
+        line-height: 1.6;
+        margin: -15px 30px -5px;
+    }
+
+    .hero-image-mobile-1024px {
+        order: 2;
+        max-width: 100%;
+    }
+
+    .hero-image-mobile-1024px img {
+        border-radius: 20px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .btn-primary-mobile-1024px {
+        order: 3;
+        background-color: #ff0000;
+        color: #fff;
+        margin: 20px;
+        padding: 15px 25px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: clamp(1rem, 4vw, 2rem);
+        font-weight: 500;
+        display: inline-block;
+        transition: 0.3s ease-in-out;
+    }
+
+    #join-aprilia h3 {
+        font-size: clamp(1rem, 4vw, 1.7rem);
+    }
+
+    #join-aprilia img {
+        max-width: clamp(4.4rem, 16vw, 6rem);
+    }
+
+    #miscellaneous .card,
+    .front,
+    .back {
+        height: 450px;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    .card-container .card:nth-child(1) .back {
+        background-image: url(../images/homepage/miscellaneous/share-mobile.png);
+    }
+
+    #miscellaneous .btn-primary-mobile-1024px {
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 623px) {
+    header {
+        padding: 7px 0;
+    }
+
+    header .logo img {
+        margin-top: 9px;
+        max-width: 92px;
+    }
+
+    .menu-icon {
+        margin-top: 9px;
+        max-height: 30px;
+    }
+
+    #featured-bikes {
+        padding: 60px 0;
+    }
+
+    #join-aprilia {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .join-items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .join-item:nth-child(3) {
+        width: 100%;
+        margin: 40px auto;
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #fff;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.3rem, 11vw, 6rem);
+        margin-bottom: 2rem;
+    }
+
+    .newsletter button {
+        margin-top: 10px;
+        font-size: 15px;
+        padding: 8px 15px;
+    }
+}
