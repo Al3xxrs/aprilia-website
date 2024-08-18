@@ -465,8 +465,11 @@ footer {
 .newsletter input[type="email"] {
     padding: 15px;
     width: clamp(100px, 10vw, 300px);
+    background: transparent;
+    color: white;
+    font-size: 15px;
     border: none;
-    border-radius: 20px;
+    border-radius: 50px;
     margin-right: -10px;
     margin-left: 10px;
 }
@@ -474,6 +477,7 @@ footer {
 .newsletter button {
     padding: 10px 20px;
     font-family: var(--font-family);
+    font-size: 17px;
     background-color: transparent;
     margin-left: 15px;
     color: #ffffff;
