@@ -22,7 +22,7 @@ To get this project up and running on your local machine:
 
 ```bash
 git clone https://github.com/your_username/aprilia-website.git
-cd covid19-dashboard/
+cd aprilia-website/
 ```
 
 3. install the dependencies
