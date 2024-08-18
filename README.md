@@ -6,9 +6,9 @@ This portfolio concept showcases a _sleek and modern_ website dedicated to April
 
 ## Tech Stack
 
-HTML
-CSS / [animate.css](https://animate.style/)
-JavaScript
+-   HTML
+-   CSS / [animate.css](https://animate.style/)
+-   JavaScript
 
 ## Installation
 
