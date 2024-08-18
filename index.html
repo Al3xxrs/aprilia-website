@@ -4,9 +4,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Aprilia</title>
-        <style>
-            @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
-        </style>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
         <link rel="icon" href="./images/logos/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="./css/style.css" />
         <link rel="stylesheet" href="./node_modules/animate.css/animate.css" />
@@ -18,15 +20,27 @@
             <div class="logo">
                 <a href="#"><img src="./images/logos/logo.png" alt="Motorcycle Company Logo" /></a>
             </div>
-            <div class="dropdown">
-                <img src="./images/general/menu.png" alt="Menu" class="menu-icon" />
-                <ul class="dropdown-menu">
-                    <li><a href="#featured-bikes">Bikes</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#join-aprilia">Join Us</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                </ul>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
             </div>
+            <nav class="nav-bar">
+                <ul>
+                    <li>
+                        <a href="#hero">About</a>
+                    </li>
+                    <li>
+                        <a href="#featured-bikes" class="active">Bikes</a>
+                    </li>
+                    <li>
+                        <a href="#join-aprilia">Join Us</a>
+                    </li>
+                    <li>
+                        <a href="#miscellaneous">More</a>
+                    </li>
+                </ul>
+            </nav>
         </header>
 
         <!-- Hero Section -->
@@ -36,37 +50,49 @@
                     <source src="./videos/RS457.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
-                <div class="hero-content">
+                <div class="hero-content animate__fadeIn">
                     <h1>Ride the Future</h1>
                 </div>
             </div>
             <div id="about" class="hero-description-container">
-                <div class="hero-description">
+                <div class="hero-description animate__fadeInLeft">
                     <p>
-                        Step into the world of cutting-edge technology and exhilarating performance. The RS457 is more than just a
-                        motorcycle, it's a revolution in design and engineering. Engineered for those who crave speed and precision, this
-                        bike offers a thrilling ride that redefines what it means to be a rider. Whether you're carving through city streets
-                        or taking on winding mountain roads, the RS457 is your ticket to an unparalleled riding experience. Discover the
-                        future of motorcycles today.
+                        Step into a world where cutting-edge technology meets exhilarating performance. The RS457 isn’t just a motorcycle;
+                        it's a revolution in design and engineering. Crafted for those who live for speed and demand precision, the RS457
+                        embodies the spirit of innovation, setting a new standard in the world of motorcycling. With its lightweight frame
+                        and powerful engine, the RS457 delivers an electrifying ride that redefines the thrill of the road. Every detail,
+                        from its aerodynamic design to its advanced electronic systems, has been meticulously engineered to provide
+                        unmatched control and agility. Whether you’re slicing through urban traffic or conquering the twists and turns of
+                        mountain roads, the RS457 is your ultimate companion, promising an adrenaline fueled experience with every twist of
+                        the throttle. The RS457 isn’t just about reaching new speeds; it’s about pushing boundaries and elevating the riding
+                        experience to new heights. With this bike, you’re not just riding into the future, you’re leading the way. Discover
+                        the next evolution in motorcycling today with the RS457, where every journey becomes an adventure and every ride, a
+                        statement.
                     </p>
                     <a href="#bikes" class="btn-primary">Learn More</a>
                 </div>
                 <div class="hero-image">
-                    <img src="./images/homepage/hero-bike.png" alt="Featured Motorcycle" />
+                    <img src="./images/homepage/hero-bike.png" alt="Featured Motorcycle" class="animate__fadeInRight" />
                 </div>
             </div>
             <div id="about" class="hero-description-container-mobile-1024px">
-                <div class="hero-description-mobile-1024px">
+                <div class="hero-description-mobile-1024px animate__fadeInLeft">
                     <p>
-                        Step into the world of cutting-edge technology and exhilarating performance. The RS457 is more than just a
-                        motorcycle, it's a revolution in design and engineering. Engineered for those who crave speed and precision, this
-                        bike offers a thrilling ride that redefines what it means to be a rider. Whether you're carving through city streets
-                        or taking on winding mountain roads, the RS457 is your ticket to an unparalleled riding experience. Discover the
-                        future of motorcycles today.
+                        Step into a world where cutting-edge technology meets exhilarating performance. The RS457 isn’t just a motorcycle;
+                        it's a revolution in design and engineering. Crafted for those who live for speed and demand precision, the RS457
+                        embodies the spirit of innovation, setting a new standard in the world of motorcycling. With its lightweight frame
+                        and powerful engine, the RS457 delivers an electrifying ride that redefines the thrill of the road. Every detail,
+                        from its aerodynamic design to its advanced electronic systems, has been meticulously engineered to provide
+                        unmatched control and agility. Whether you’re slicing through urban traffic or conquering the twists and turns of
+                        mountain roads, the RS457 is your ultimate companion, promising an adrenaline fueled experience with every twist of
+                        the throttle. The RS457 isn’t just about reaching new speeds; it’s about pushing boundaries and elevating the riding
+                        experience to new heights. With this bike, you’re not just riding into the future, you’re leading the way. Discover
+                        the next evolution in motorcycling today with the RS457, where every journey becomes an adventure and every ride, a
+                        statement.
                     </p>
                 </div>
                 <div class="hero-image-mobile-1024px">
-                    <img src="./images/homepage/hero-bike.png" alt="Featured Motorcycle" />
+                    <img src="./images/homepage/hero-bike.png" alt="Featured Motorcycle" class="animate__fadeInRight" />
                 </div>
                 <a href="#bikes" class="btn-primary-mobile-1024px">Learn More</a>
             </div>
@@ -77,84 +103,84 @@
             <div class="container">
                 <h2>All Models</h2>
                 <div class="bike-grid">
-                    <a href="#" class="bike-item">
+                    <a href="#" class="bike-item animate__fadeInUp">
                         <img src="./images/homepage/featured-bikes/RSV4.png" alt="RSV4" />
                         <div class="bike-details">
                             <h3>RSV4 1100 Factory</h3>
                             <p>Starting at $25,999</p>
                         </div>
                     </a>
-                    <a href="#" class="bike-item">
+                    <a href="#" class="bike-item animate__fadeInUp">
                         <img src="./images/homepage/featured-bikes/Tuono-V4.png" alt="Tuono V4" />
                         <div class="bike-details">
                             <h3>Tuono V4</h3>
                             <p>Starting at $17,999</p>
                         </div>
                     </a>
-                    <a href="#" class="bike-item">
+                    <a href="#" class="bike-item animate__fadeInUp">
                         <img src="./images/homepage/featured-bikes/RS660.png" alt="RS660" />
                         <div class="bike-details">
                             <h3>RS 660</h3>
                             <p>Starting at $11,499</p>
                         </div>
                     </a>
-                    <a href="#" class="bike-item">
+                    <a href="#" class="bike-item animate__fadeInUp">
                         <img src="./images/homepage/featured-bikes/Tuono-660.png" alt="Tuono 660" />
                         <div class="bike-details">
                             <h3>Tuono 660</h3>
                             <p>Starting at $10,699</p>
                         </div>
                     </a>
-                    <a href="#" class="bike-item">
+                    <a href="#" class="bike-item animate__fadeInUp">
                         <img src="./images/homepage/featured-bikes/Tuareg-660.png" alt="Tuareg 660" />
                         <div class="bike-details">
                             <h3>Tuareg 660</h3>
                             <p>Starting at $12,599</p>
                         </div>
                     </a>
-                    <a href="#" class="bike-item">
+                    <a href="#" class="bike-item animate__fadeInUp">
                         <img src="./images/homepage/featured-bikes/RS457.png" alt="RS457" />
                         <div class="bike-details">
                             <h3>RS 457</h3>
                             <p>Starting at $8,499</p>
                         </div>
                     </a>
-                    <a href="#" class="bike-item">
+                    <a href="#" class="bike-item animate__fadeInUp">
                         <img src="./images/homepage/featured-bikes/RS125.png" alt="RS125" />
                         <div class="bike-details">
                             <h3>RS 125</h3>
                             <p>Starting at $5,599</p>
                         </div>
                     </a>
-                    <a href="#" class="bike-item">
+                    <a href="#" class="bike-item animate__fadeInUp">
                         <img src="./images/homepage/featured-bikes/Tuono-125.png" alt="Tuono 125" />
                         <div class="bike-details">
                             <h3>Tuono 125</h3>
                             <p>Starting at $5,399</p>
                         </div>
                     </a>
-                    <a href="#" class="bike-item">
+                    <a href="#" class="bike-item animate__fadeInUp">
                         <img src="./images/homepage/featured-bikes/sx-125.png" alt="SX 125" />
                         <div class="bike-details">
                             <h3>SX 125</h3>
                             <p>Starting at $5,299</p>
                         </div>
                     </a>
-                    <a href="#" class="bike-item">
+                    <a href="#" class="bike-item animate__fadeInUp">
                         <img src="./images/homepage/featured-bikes/rx-125.png" alt="RX 125" />
                         <div class="bike-details">
                             <h3>RX 125</h3>
                             <p>Starting at $5,399</p>
                         </div>
                     </a>
-                    <a href="#" class="bike-item">
+                    <a href="#" class="bike-item animate__fadeInUp">
                         <img src="./images/homepage/featured-bikes/sr-gt.png" alt="SR GT" />
                         <div class="bike-details">
                             <h3>SR GT 200</h3>
                             <p>Starting at $3,999</p>
                         </div>
                     </a>
-                    <a href="#" class="bike-item">
+                    <a href="#" class="bike-item animate__fadeInUp">
                         <img src="./images/homepage/featured-bikes/sxr.png" alt="SXR" />
                         <div class="bike-details">
                             <h3>SXR 50</h3>
@@ -238,6 +264,6 @@
             </div>
         </footer>
 
-        <script src="./js/script.js"></script>
+        <script src="./js/script.js" defer></script>
     </body>
 </html>
